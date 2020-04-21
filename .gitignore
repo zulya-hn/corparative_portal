@@ -4,6 +4,8 @@
 !.eslintrc.json
 !.babelrc
 
+corparative_portal.iml
+
 # Default ignored foldes
 /.idea
 /node_modules
