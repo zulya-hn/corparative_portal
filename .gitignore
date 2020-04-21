@@ -1,0 +1,9 @@
+# Default ignored files
+.*
+!.gitignore
+!.eslintrc.json
+!.babelrc
+
+# Default ignored foldes
+/.idea
+/node_modules
