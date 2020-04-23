@@ -1,0 +1,17 @@
+// second-view-page
+
+.second-view-page {
+    margin-top: 50px;
+}
+
+.links-side {
+    display: flex;
+    flex-wrap: wrap;
+    .icon-link {
+        flex-basis: 50%;
+    }
+}
+
+.some-text {
+    text-align: justify;
+}
