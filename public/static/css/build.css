@@ -1,2 +1,146 @@
-body{margin:100px}.wrapper{background:gray;min-height:100vh}
+@charset "UTF-8";
+body {
+  margin: 0;
+  background: #EDEDEE; }
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  height: 60px;
+  margin-bottom: 60px;
+  color: white;
+  background: #21226F; }
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+img,
+.arm {
+  height: 50px;
+  margin-top: 5px; }
+
+.col {
+  border: 1px solid transparent;
+  text-align: center; }
+
+.icon {
+  margin: 30px auto 0;
+  width: 143px;
+  height: 142px;
+  background: url("http://localhost:63342/Corparative%20portal/public/static/img/icon-sprite.png") no-repeat; }
+
+.icon.two {
+  background-position: -153px 0;
+  /* вверх на 16px */
+  cursor: pointer; }
+
+.icon.three {
+  background-position: -306px 0;
+  /* по умолчанию */
+  cursor: pointer; }
+
+.icon.four {
+  background-position: -459px 0;
+  /* вверх на 32px */
+  cursor: pointer; }
+
+.icon__text {
+  text-align: center; }
+
+.icon.a {
+  background-position: 0 -153px;
+  /* по умолчанию */
+  cursor: pointer; }
+
+.icon.b {
+  background-position: -153px -153px;
+  /* по умолчанию */
+  cursor: pointer; }
+
+.icon.c {
+  background-position: -306px -153px;
+  /* по умолчанию */
+  cursor: pointer; }
+
+.icon.d {
+  background-position: -459px -153px;
+  /* по умолчанию */
+  cursor: pointer; }
+
+.second__page {
+  display: flex;
+  margin-top: 50px; }
+
+.left__side {
+  width: 50%; }
+
+.right__side {
+  width: 50%; }
+
+.some__text {
+  text-align: justify; }
+
+.container_2 {
+  justify-content: center; }
+
+.blackout.active {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 0.1;
+  background: #000; }
+
+.alert {
+  display: none;
+  position: absolute;
+  top: 60%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 600px;
+  height: 400px;
+  background: white; }
+
+.alert.active {
+  display: block;
+  position: absolute;
+  top: 60%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  width: 600px;
+  height: 400px;
+  background: white; }
+
+.alert__header {
+  display: block;
+  position: relative;
+  top: -4%;
+  right: 21px;
+  width: 600px;
+  height: 50px;
+  background: #21226F; }
+  .alert__header h2 {
+    color: white;
+    text-align: center; }
+
+.ok__button {
+  width: 150px;
+  height: 50px;
+  position: relative;
+  top: 53%;
+  right: -35%;
+  border: 3px solid #21226F;
+  background: #EDEDEE;
+  cursor: pointer; }
+  .ok__button h2 {
+    color: #21226F;
+    text-align: center; }
 
