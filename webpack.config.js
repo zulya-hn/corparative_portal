@@ -1,10 +1,11 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
     entry: './resources/js/index.js',
     output: {
-        path: path.join(__dirname, '/public/static/js'),
+        path: path.resolve(__dirname, 'public/static/js'),
         filename: 'build.js'
     },
     module: {
@@ -23,12 +24,25 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            }
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        emitFile: false,
+                        name: '../[folder]/[name].[ext]'
+                    }
+                },
+            },
         ]
     },
     plugins: [
         new MiniCssExtractPlugin({
             filename: '../css/build.css'
+        }),
+        new LiveReloadPlugin({
+            port: 3030
         })
     ]
 };

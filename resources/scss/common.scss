@@ -1,4 +1,45 @@
+@import 'components/first_view_page';
+@import 'components/second_view_page';
+@import 'components/modal_window';
+
+body {
+    margin: 0;
+    background: #EDEDEE;
+}
+
 .wrapper {
-    background: gray;
     min-height: 100vh;
+}
+
+.header {
+    color: white;
+    background: #21226F;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+main {
+    padding-top: 25px;
+}
+
+.insignia {
+    height: 50px;
+    width: auto;
+}
+
+.first-view-page,
+.second-view-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.icon-link {
+    text-align: center;
+    flex-basis: 25%;
 }
