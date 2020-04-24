@@ -1,4 +1,5 @@
-.blackout.active {
+.alert__background {
+    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -9,10 +10,12 @@
 
     opacity: 0.1;
     background: #000;
+    &.active {
+        display: block;
+    }
 }
 
-.alert {
-    display: none;
+.alert__window {
     position: absolute;
     top: 60%;
     right: 0;
@@ -22,19 +25,6 @@
     width: 600px;
     height: 400px;
     background: white;
-
-    &.active {
-        display: block;
-        position: absolute;
-        top: 60%;
-        right: 0;
-        transform: translate(-50%, -50%);
-        z-index: 200;
-
-        width: 600px;
-        height: 400px;
-        background: white;
-    }
 }
 
 .alert__header {
