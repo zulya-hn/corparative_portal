@@ -1,6 +1,7 @@
+@import "~bootstrap";
 @import 'components/first_view_page';
 @import 'components/second_view_page';
-@import 'components/modal_window';
+@import 'components/alert';
 
 body {
     margin: 0;
@@ -39,7 +40,23 @@ main {
     justify-content: space-between;
 }
 
+.js-page {
+    display: none;
+}
+
+.js-current_page {
+    display: flex;
+}
+
 .icon-link {
-    text-align: center;
     flex-basis: 25%;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
 }
