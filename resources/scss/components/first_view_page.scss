@@ -4,38 +4,80 @@
     margin: 15px auto 0;
     width: 64px;
     height: 64px;
-    //background-image: url('../../public/static/img/icon-sprite.png');
+    background-image: url('../../public/static/img/icon-sprite.png');
     background-color: #ddd;
     background-repeat: no-repeat;
-    background-size: 428%;
+    background-size: 562%;
     cursor: pointer;
     border-radius: 15px;
+
+    $sprite-icon-size: calc((64px + 10px) * (-1));
+
+    &[data-sprite-coords^="A"] {
+        background-position-y: 0;
+    }
+    &[data-sprite-coords^="B"] {
+        background-position-y: $sprite-icon-size;
+    }
+    &[data-sprite-coords^="C"] {
+        background-position-y: calc(#{$sprite-icon-size} * 2);
+    }
+    &[data-sprite-coords^="D"] {
+        background-position-y: calc(#{$sprite-icon-size} * 3);
+    }
+    &[data-sprite-coords^="E"] {
+        background-position-y: calc(#{$sprite-icon-size} * 4);
+    }
+    &[data-sprite-coords$="1"] {
+        background-position-x: 0;
+    }
+    &[data-sprite-coords$="2"] {
+        background-position-x: $sprite-icon-size;
+    }
+    &[data-sprite-coords$="3"] {
+        background-position-x: calc(#{$sprite-icon-size} * 2);
+    }
+    &[data-sprite-coords$="4"] {
+        background-position-x: calc(#{$sprite-icon-size} * 3);
+    }
+
     @media (min-width: 992px) {
         margin: 20px auto 0;
         width: 96px;
         height: 96px;
-    }
 
-    &.two {
-        background-position: -153px 0; /* вверх на 16px */
-    }
-    &.three {
-        background-position: -306px 0; /* по умолчанию */
-    }
-    &.four {
-        background-position: -459px 0; /* вверх на 32px */
-    }
-    &.a {
-        background-position: 0 -153px; /* по умолчанию */
-    }
-    &.b {
-        background-position: -153px -153px; /* по умолчанию */
-    }
-    &.c {
-        background-position: -306px -153px; /* по умолчанию */
-    }
-    &.d {
-        background-position: -459px -153px; /* по умолчанию */
+        $sprite-icon-size: calc((96px + 15px) * (-1));
+
+        &[data-sprite-coords^="A"] {
+            background-position-y: 0;
+        }
+        &[data-sprite-coords^="B"] {
+            background-position-y: $sprite-icon-size;
+        }
+        &[data-sprite-coords^="C"] {
+            background-position-y: calc(#{$sprite-icon-size} * 2);
+        }
+        &[data-sprite-coords^="D"] {
+            background-position-y: calc(#{$sprite-icon-size} * 3);
+        }
+        &[data-sprite-coords^="E"] {
+            background-position-y: calc(#{$sprite-icon-size} * 4);
+        }
+        &[data-sprite-coords$="1"] {
+            background-position-x: 0;
+        }
+        &[data-sprite-coords$="2"] {
+            background-position-x: $sprite-icon-size;
+        }
+        &[data-sprite-coords$="3"] {
+            background-position-x: calc(#{$sprite-icon-size} * 2);
+        }
+        &[data-sprite-coords$="4"] {
+            background-position-x: calc(#{$sprite-icon-size} * 3);
+        }
+        &[data-sprite-coords$="5"] {
+            background-position-x: calc(#{$sprite-icon-size} * 4);
+        }
     }
 }
 

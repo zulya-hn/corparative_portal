@@ -5,12 +5,13 @@
 
 body {
     margin: 0;
-
 }
 
 .wrapper {
-    min-height: 100vh;
+
 }
+
+$header-height: 70px;
 
 .header {
     color: white;
@@ -21,7 +22,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: $header-height;
     .title {
         text-align: center;
         flex-grow: 1;
@@ -29,7 +30,7 @@ body {
 }
 
 main {
-    min-height: inherit;
+    min-height: calc(100vh - #{$header-height});
     background: #E2E2E2;
     &>.container {
         min-height: inherit;
