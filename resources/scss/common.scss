@@ -5,6 +5,10 @@
 
 body {
     margin: 0;
+    font-size: 14px;
+    @media (min-width: 992px) {
+        font-size: 16px;
+    }
 }
 
 .wrapper {
@@ -60,8 +64,9 @@ main {
 }
 
 .icon-link {
-    flex-basis: 25%;
+    width: 25%;
     text-align: center;
+    padding: 0;
     border: none;
     background-color: transparent;
     &:focus {

@@ -1,9 +1,9 @@
 // ICONS
 
 .icon {
-    margin: 15px auto 0;
-    width: 64px;
-    height: 64px;
+    margin: 20px auto 0;
+    width: 50px;
+    height: 50px;
     background-image: url('../../public/static/img/icon-sprite.png');
     background-color: #ddd;
     background-repeat: no-repeat;
@@ -11,7 +11,7 @@
     cursor: pointer;
     border-radius: 15px;
 
-    $sprite-icon-size: calc((64px + 10px) * (-1));
+    $sprite-icon-size: calc((50px + 7.8px) * (-1));
 
     &[data-sprite-coords^="A"] {
         background-position-y: 0;
@@ -41,8 +41,43 @@
         background-position-x: calc(#{$sprite-icon-size} * 3);
     }
 
+    @media (min-width: 576px) {
+        width: 64px;
+        height: 64px;
+
+        $sprite-icon-size: calc((64px + 10px) * (-1));
+
+        &[data-sprite-coords^="A"] {
+            background-position-y: 0;
+        }
+        &[data-sprite-coords^="B"] {
+            background-position-y: $sprite-icon-size;
+        }
+        &[data-sprite-coords^="C"] {
+            background-position-y: calc(#{$sprite-icon-size} * 2);
+        }
+        &[data-sprite-coords^="D"] {
+            background-position-y: calc(#{$sprite-icon-size} * 3);
+        }
+        &[data-sprite-coords^="E"] {
+            background-position-y: calc(#{$sprite-icon-size} * 4);
+        }
+        &[data-sprite-coords$="1"] {
+            background-position-x: 0;
+        }
+        &[data-sprite-coords$="2"] {
+            background-position-x: $sprite-icon-size;
+        }
+        &[data-sprite-coords$="3"] {
+            background-position-x: calc(#{$sprite-icon-size} * 2);
+        }
+        &[data-sprite-coords$="4"] {
+            background-position-x: calc(#{$sprite-icon-size} * 3);
+        }
+    }
+
     @media (min-width: 992px) {
-        margin: 20px auto 0;
+        margin: 30px auto 0;
         width: 96px;
         height: 96px;
 
@@ -82,5 +117,10 @@
 }
 
 .icon__text {
+    margin-top: 10px;
+    line-height: 1.15;
     text-align: center;
+    @media (min-width: 992px) {
+        margin: 15px;
+    }
 }
