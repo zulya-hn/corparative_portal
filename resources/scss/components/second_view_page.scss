@@ -1,17 +1,20 @@
 // second-view-page
 
 .second-view-page {
-    margin-top: 50px;
+
 }
 
 .links-side {
     display: flex;
     flex-wrap: wrap;
     .icon-link {
-        flex-basis: 50%;
+        flex-basis: 25%;
+        @media (min-width: 768px) {
+            flex-basis: 33%;
+        }
     }
 }
 
 .some-text {
-    text-align: justify;
+    margin-top: 15px;
 }

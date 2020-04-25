@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background: #EDEDEE;
+
 }
 
 .wrapper {
@@ -22,11 +22,21 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    .title {
+        text-align: center;
+        flex-grow: 1;
+    }
 }
 
 main {
-    padding-top: 25px;
+    min-height: inherit;
+    background: #E2E2E2;
+    &>.container {
+        min-height: inherit;
+        background: #F5F5F5;
+    }
 }
+
 
 .insignia {
     height: 50px;
@@ -35,9 +45,9 @@ main {
 
 .first-view-page,
 .second-view-page {
+    padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .js-page {
@@ -58,5 +68,8 @@ main {
     }
     &:hover {
         text-decoration: underline;
+    }
+    @media (min-width: 992px) {
+        flex-basis: 20%;
     }
 }

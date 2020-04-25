@@ -1,13 +1,21 @@
 // ICONS
 
 .icon {
-    margin: 30px auto 0;
-    width: 143px;
-    height: 142px;
-    background-image: url('../../public/static/img/icon-sprite.png');
+    margin: 15px auto 0;
+    width: 64px;
+    height: 64px;
+    //background-image: url('../../public/static/img/icon-sprite.png');
+    background-color: #ddd;
     background-repeat: no-repeat;
     background-size: 428%;
     cursor: pointer;
+    border-radius: 15px;
+    @media (min-width: 992px) {
+        margin: 20px auto 0;
+        width: 96px;
+        height: 96px;
+    }
+
     &.two {
         background-position: -153px 0; /* вверх на 16px */
     }
