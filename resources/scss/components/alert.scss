@@ -1,6 +1,15 @@
-.alert__background {
+
+.corp-alert {
     display: none;
-    position: absolute;
+
+    &.active {
+        display: block;
+    }
+}
+
+
+.alert__background {
+    position: fixed;
     width: 100%;
     height: 100%;
 
@@ -8,53 +17,62 @@
     left: 0;
     z-index: 100;
 
-    opacity: 0.1;
+    opacity: 0.82;
     background: #000;
-    &.active {
-        display: block;
-    }
 }
 
 .alert__window {
-    position: absolute;
-    top: 60%;
-    right: 0;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
     z-index: 200;
-
+    transform: translate(-50%, -50%);
 
     width: 600px;
-    height: 400px;
+    height: 350px;
     background: white;
-}
+    border-radius: 20px 20px 15px 15px;
+    @media (max-width: 576px) {
+        width: 100%;
+        height: 30%;
+        position: fixed;
+        max-width: 100%;
+        top: 100%;
+    }
+    }
+
 
 .alert__header {
-    h2 {
-        color: white;
-        text-align: center;
-    }
+    color: white;
+    text-align: center;
     display: block;
     position: relative;
 
     width: 600px;
-    height: 50px;
+    height: 60px;
 
     background: #21226F;
+    border-radius: 15px 15px 0 0;
+    font-size: 35px;
+    line-height: inherit;
+}
+
+.alert__text {
+    margin: 50px;
+    font-size: 20px;
+    vertical-align: middle;
+    text-align: center;
 }
 
 .ok__button {
-    width: 150px;
-    height: 50px;
-
-    position: relative;
-    top: 53%;
-    right: -35%;
+    width: 100px;
+    height: 35px;
+    margin: 0 250px;
 
     border: 3px solid #21226F;
-    background: #EDEDEE;
-    cursor: pointer;
-    h2 {
-        color: #21226F;
-        text-align: center;
+    text-transform: uppercase;
+    line-height: inherit;
+    &:active {
+        background: #CECECF;
     }
 }
