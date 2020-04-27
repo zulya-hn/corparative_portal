@@ -48,6 +48,8 @@ main {
     min-height: calc(100vh - #{$header-height});
     background: #E2E2E2;
     &>.container {
+        display: flex;
+        align-items: center;
         min-height: inherit;
         background: #F5F5F5;
     }
@@ -61,10 +63,11 @@ main {
 
 .first-view-page,
 .second-view-page {
-    padding-top: 25px;
+    padding: 25px 0 35px;
     display: flex;
     flex-wrap: wrap;
     margin: 0 -3.5px;
+    align-items: flex-start;
 }
 
 .js-page {
