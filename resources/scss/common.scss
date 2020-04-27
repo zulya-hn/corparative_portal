@@ -64,6 +64,7 @@ main {
     padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
+    margin: 0 -3.5px;
 }
 
 .js-page {
@@ -76,8 +77,8 @@ main {
 
 .icon-link {
     width: 25%;
+    padding: 0 3.5px;
     text-align: center;
-    padding: 0;
     border: none;
     background-color: transparent;
     &:focus {
