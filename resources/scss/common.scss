@@ -3,14 +3,26 @@
 @import 'components/second_view_page';
 @import 'components/alert';
 
+button:active, button:focus {
+    outline: none;
+}
+
 body {
     margin: 0;
-    background: #EDEDEE;
+    font-size: 14px;
+    @media (min-width: 992px) {
+        font-size: 20px;
+    }
+    @media (max-width: 425px) {
+        font-size: 12px;
+    }
 }
 
 .wrapper {
-    min-height: 100vh;
+
 }
+
+$header-height: 70px;
 
 .header {
     color: white;
@@ -21,12 +33,25 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: $header-height;
+    .title {
+        text-align: center;
+        flex-grow: 1;
+        @media (max-width: 576px) {
+            font-size: 30px;
+        }
+    }
 }
 
 main {
-    padding-top: 25px;
+    min-height: calc(100vh - #{$header-height});
+    background: #E2E2E2;
+    &>.container {
+        min-height: inherit;
+        background: #F5F5F5;
+    }
 }
+
 
 .insignia {
     height: 50px;
@@ -35,9 +60,9 @@ main {
 
 .first-view-page,
 .second-view-page {
+    padding-top: 25px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .js-page {
@@ -49,8 +74,9 @@ main {
 }
 
 .icon-link {
-    flex-basis: 25%;
+    width: 25%;
     text-align: center;
+    padding: 0;
     border: none;
     background-color: transparent;
     &:focus {
@@ -58,5 +84,8 @@ main {
     }
     &:hover {
         text-decoration: underline;
+    }
+    @media (min-width: 992px) {
+        flex-basis: 20%;
     }
 }
